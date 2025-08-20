@@ -46,6 +46,10 @@ const Login = () => {
                 value: 5,
                 message: "Email must be at least 5 characters long",
               },
+              pattern: {
+                value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                message: "Invalid email format",
+              },
             })}
             id="email"
           />
