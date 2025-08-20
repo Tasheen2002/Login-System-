@@ -14,8 +14,10 @@ const Login = () => {
 
   return (
     <div>
+      <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">
+        Create an Account
+      </h2>
       <form onSubmit={handleSubmit(submitCall)}>
-        <h2>Create an Account</h2>
         <div>
           <label htmlFor="fullName">Full Name</label>
           <input
@@ -87,7 +89,8 @@ const Login = () => {
                 message: "Password should be at least 8 characters",
               },
               pattern: {
-                value: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,
+                value:
+                  /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,
                 message:
                   "Password must contain uppercase, lowercase, number & special character",
               },
