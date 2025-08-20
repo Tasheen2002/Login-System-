@@ -57,7 +57,7 @@ const Register = () => {
               Email
             </label>
             <input
-              type="email"
+              type="text"
               {...register("email", {
                 required: "Email is required",
                 minLength: {
@@ -87,12 +87,12 @@ const Register = () => {
               Mobile
             </label>
             <input
-              type="number"
+              type="text"
               {...register("mobile", {
                 required: "Mobile number is required",
                 minLength: {
-                  value: 5,
-                  message: "Mobile number must be at least 5 characters long",
+                  value: 10,
+                  message: "Mobile number must be at least 10 characters long",
                 },
                 pattern: {
                   value: /^[0-9]{10}$/,
@@ -131,7 +131,7 @@ const Register = () => {
                     "Password must contain uppercase, lowercase, number & special character",
                 },
               })}
-              type="password"
+              type="text"
               className="w-full rounded-lg border border-gray-300 px-3 py-2 text-gray-700 focus:border-blue-500 focus:ring focus:ring-blue-200 outline-none"
             />
             {errors.password && (
