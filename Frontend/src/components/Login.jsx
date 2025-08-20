@@ -66,6 +66,10 @@ const Login = () => {
                 value: 5,
                 message: "Mobile number must be at least 5 characters long",
               },
+              pattern: {
+                value: /^[0-9]{10}$/,
+                message: "Mobile number must be exactly 10 digits",
+              },
             })}
             id="mobile"
           />
