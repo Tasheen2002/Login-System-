@@ -27,6 +27,10 @@ const Login = () => {
                 value: 3,
                 message: "Name must be at least 3 characters long",
               },
+              pattern: {
+                value: /^[A-Za-z\s]+$/,
+                message: "Name can only contain letters and spaces",
+              },
             })}
           />
           {errors.fullName && <div>{errors.fullName.message}</div>}
