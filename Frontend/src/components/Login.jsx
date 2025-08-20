@@ -22,13 +22,14 @@ const Login = () => {
             id="fullName"
             type="text"
             {...register("fullName", {
-              required: "Name ia required",
+              required: "Name is required",
               minLength: {
                 value: 3,
                 message: "Name must be at least 3 characters long",
               },
             })}
           />
+          {errors.fullName && <div>{errors.fullName.message}</div>}
         </div>
 
         <div>
@@ -44,6 +45,7 @@ const Login = () => {
             })}
             id="email"
           />
+          {errors.email && <div>{errors.email.message}</div>}
         </div>
 
         <div>
@@ -59,6 +61,7 @@ const Login = () => {
             })}
             id="mobile"
           />
+          {errors.mobile && <div>{errors.mobile.message}</div>}
         </div>
 
         <div>
@@ -75,6 +78,7 @@ const Login = () => {
             type="password"
             {...register("password")}
           />
+          {errors.password && <div>{errors.password.message}</div>}
         </div>
 
         <button type="submit">Register</button>
