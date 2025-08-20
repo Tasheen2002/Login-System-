@@ -42,11 +42,20 @@ const Login = () => {
               })}
               className="w-full rounded-lg border border-gray-300 px-3 py-2 text-gray-700 focus:border-blue-500 focus:ring focus:ring-blue-200 outline-none"
             />
-            {errors.fullName && <div>{errors.fullName.message}</div>}
+            {errors.fullName && (
+              <p className="text-sm text-red-500 mt-1">
+                {errors.fullName.message}
+              </p>
+            )}
           </div>
 
           <div>
-            <label htmlFor="email">Email</label>
+            <label
+              htmlFor="email"
+              className="block text-sm font-medium text-gray-700 mb-1"
+            >
+              Email
+            </label>
             <input
               type="email"
               {...register("email", {
@@ -61,8 +70,13 @@ const Login = () => {
                 },
               })}
               id="email"
+              className="w-full rounded-lg border border-gray-300 px-3 py-2 text-gray-700 focus:border-blue-500 focus:ring focus:ring-blue-200 outline-none"
             />
-            {errors.email && <div>{errors.email.message}</div>}
+            {errors.email && (
+              <p className="text-sm text-red-500 mt-1">
+                {errors.fullName.message}
+              </p>
+            )}
           </div>
 
           <div>
