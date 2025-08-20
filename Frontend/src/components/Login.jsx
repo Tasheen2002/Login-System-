@@ -86,6 +86,11 @@ const Login = () => {
                 value: 8,
                 message: "Password should be at least 8 characters",
               },
+              pattern: {
+                value: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,
+                message:
+                  "Password must contain uppercase, lowercase, number & special character",
+              },
             })}
             type="password"
             {...register("password")}
