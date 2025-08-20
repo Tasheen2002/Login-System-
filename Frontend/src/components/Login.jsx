@@ -74,13 +74,18 @@ const Login = () => {
             />
             {errors.email && (
               <p className="text-sm text-red-500 mt-1">
-                {errors.fullName.message}
+                {errors.email.message}
               </p>
             )}
           </div>
 
           <div>
-            <label htmlFor="mobile">Mobile</label>
+            <label
+              htmlFor="mobile"
+              className="block text-sm font-medium text-gray-700 mb-1"
+            >
+              Mobile
+            </label>
             <input
               type="number"
               {...register("mobile", {
@@ -95,12 +100,22 @@ const Login = () => {
                 },
               })}
               id="mobile"
+              className="w-full rounded-lg border border-gray-300 px-3 py-2 text-gray-700 focus:border-blue-500 focus:ring focus:ring-blue-200 outline-none"
             />
-            {errors.mobile && <div>{errors.mobile.message}</div>}
+            {errors.mobile && (
+              <p className="text-sm text-red-500 mt-1">
+                {errors.mobile.message}
+              </p>
+            )}
           </div>
 
           <div>
-            <label htmlFor="password">Passowrd</label>
+            <label
+              htmlFor="password"
+              className="block text-sm font-medium text-gray-700 mb-1"
+            >
+              Passowrd
+            </label>
             <input
               id="password"
               {...register("password", {
@@ -118,8 +133,13 @@ const Login = () => {
               })}
               type="password"
               {...register("password")}
+              className="w-full rounded-lg border border-gray-300 px-3 py-2 text-gray-700 focus:border-blue-500 focus:ring focus:ring-blue-200 outline-none"
             />
-            {errors.password && <div>{errors.password.message}</div>}
+            {errors.password && (
+              <p className="text-sm text-red-500 mt-1">
+                {errors.password.message}
+              </p>
+            )}
           </div>
 
           <button type="submit">Register</button>
